@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vishal.alarm_clock">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".new_alarm"
+            android:label="@string/title_activity_new_alaram"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".alarm_run" />
+
+        <receiver
+            android:name=".Alarm_brod"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Delete_alarm"
+            android:label="@string/title_activity_delete_alaram"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Set_ringtone"></activity>
+    </application>
+
+</manifest>

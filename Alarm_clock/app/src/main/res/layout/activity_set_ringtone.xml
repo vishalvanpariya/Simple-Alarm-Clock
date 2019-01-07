@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2017 Keval Patel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance wit
+  ~ the License. You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for
+  ~  the specific language governing permissions and limitations under the License.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.ringtonepicker.sample.MainActivity">
+
+    <Button
+        android:id="@+id/btn_pick_ringtone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Pick ringtone"/>
+
+    <CheckedTextView
+        android:id="@+id/cb_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_pick_ringtone"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center"
+        android:text="Music"/>
+
+    <CheckedTextView
+        android:id="@+id/cb_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cb_music"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center"
+        android:text="Alarm"/>
+
+    <CheckedTextView
+        android:id="@+id/cb_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cb_alarm"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center"
+        android:text="Notification"/>
+
+    <CheckedTextView
+        android:id="@+id/cb_ringtone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cb_notification"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:checked="true"
+        android:gravity="center"
+        android:text="Ringtone"/>
+
+    <TextView
+        android:id="@+id/tv_hearing_1"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cb_ringtone"
+        android:text="Ringtone types: "/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_default_ringtone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_hearing_1"
+        android:layout_marginBottom="8dp"
+        android:checked="true"
+        android:text="Add default ringtone"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_silent_ringtone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/switch_default_ringtone"
+        android:checked="true"
+        android:text="Add silent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_play_ringtone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/switch_silent_ringtone"
+        android:text="Play ringtone"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+    <TextView
+        android:id="@+id/tv_ringtone_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/switch_play_ringtone"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="No ringtone selected"/>
+
+</RelativeLayout>
